@@ -1,18 +1,37 @@
 .grid-container {
+    position: relative;
+}
+
+.hide {
     display: grid;
     align-items: center;
     justify-content: center;
     grid-template-columns: 200px 200px 200px 200px 200px 200px;
     grid-template-rows: 200px 200px 200px;
     grid-gap: 20px;
-    grid-template-areas: 
-    "bottom bottom bottom bottom bottom bottom"
-    "bottom bottom bottom bottom bottom bottom"
-    "bottom bottom bottom bottom bottom bottom";
 }
 
-.bottom {
-    grid-area: bottom; 
+.hide {
+    position: absolute;
+    top: 0;
+}
+
+.reveal {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 200px 200px 200px 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+    grid-gap: 20px;
+}
+
+.reveal {
+    position: absolute;
+    top: 0;
+}
+
+.bottom, .reveal {
+    grid-area: bottom, top; 
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
