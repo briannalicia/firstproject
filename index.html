@@ -5,50 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css" media="screen" title="no title" />
-    <script src="script.js" charset="utf-8"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="grid-container">
-        <div class="hide">
-            <div class="image_1"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
-            <div class="image_1"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
-            <div class="image_2"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
-            <div class="image_2"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
-            <div class="image_3"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
-            <div class="image_3"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
-            <div class="image_4"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
-            <div class="image_4"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
-            <div class="image_5"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
-            <div class="image_5"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
-            <div class="image_6"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
-            <div class="image_6"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
-            <div class="image_7"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
-            <div class="image_7"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
-            <div class="image_8"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
-            <div class="image_8"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
-            <div class="image_9"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
-            <div class="image_9"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
-            </div>
         <div class="reveal">  
-            <div class="blue"><img src="blue_donut.png" alt="blue" class="top"></div>
-            <div class="candies"><img src="candies_donut.png" alt="candies" class="top"></div>
-            <div class="nuts"><img src="chocolate_with_nuts.png" alt="nuts" class="top"></div>
-            <div class="pink"><img src="pink_sprinkles_donut.png" alt="pink" class="top"></div>
-            <div class="strawberry"><img src="strawberry_donut.png" alt="strawberry" class="top"></div>
-            <div class="green"><img src="green_donut.png" alt="green" class="top"></div>
-            <div class="striped"><img src="chocolate_striped_donut.png" alt="striped" class="top"></div>
-            <div class="chocolate"><img src="chocolate_covered_donut.png" alt="chocolate" class="top"></div>
-            <div class="sprinkles"><img src="sprinkles_donut.png" alt="sprinkles" class="top"></div>
-            <div class="blue"><img src="blue_donut.png" alt="blue" class="top"></div>
-            <div class="candies"><img src="candies_donut.png" alt="candies" class="top"></div>
-            <div class="nuts"><img src="chocolate_with_nuts.png" alt="nuts" class="top"></div>
-            <div class="pink"><img src="pink_sprinkles_donut.png" alt="pink" class="top"></div>
-            <div class="strawberry"><img src="strawberry_donut.png" alt="strawberry" class="top"></div>
-            <div class="green"><img src="green_donut.png" alt="green" class="top"></div>
-            <div class="striped"><img src="chocolate_striped_donut.png" alt="striped" class="top"></div>
-            <div class="chocolate"><img src="chocolate_covered_donut.png" alt="chocolate" class="top"></div>
-            <div class="sprinkles"><img src="sprinkles_donut.png" alt="sprinkles" class="top"></div>
+            <div id="blue-donut"><img id="blue" src="blue_donut.png" alt="blue" class="top"></div>
+            <div id="candies"><img src="candies_donut.png" alt="candies" class="top"></div>
+            <div id="nuts"><img src="chocolate_with_nuts.png" alt="nuts" class="top"></div>
+            <div id="pink"><img src="pink_sprinkles_donut.png" alt="pink" class="top"></div>
+            <div id="strawberry"><img src="strawberry_donut.png" alt="strawberry" class="top"></div>
+            <div id="green"><img src="green_donut.png" alt="green" class="top"></div>
+            <div id="striped"><img src="chocolate_striped_donut.png" alt="striped" class="top"></div>
+            <div id="chocolate"><img src="chocolate_covered_donut.png" alt="chocolate" class="top"></div>
+            <div id="sprinkles"><img src="sprinkles_donut.png" alt="sprinkles" class="top"></div>
+            <div id="blue"><img src="blue_donut.png" alt="blue" class="top"></div>
+            <div id="candies"><img src="candies_donut.png" alt="candies" class="top"></div>
+            <div id="nuts"><img src="chocolate_with_nuts.png" alt="nuts" class="top"></div>
+            <div id="pink"><img src="pink_sprinkles_donut.png" alt="pink" class="top"></div>
+            <div id="strawberry"><img src="strawberry_donut.png" alt="strawberry" class="top"></div>
+            <div id="green"><img src="green_donut.png" alt="green" class="top"></div>
+            <div id="striped"><img src="chocolate_striped_donut.png" alt="striped" class="top"></div>
+            <div id="chocolate"><img src="chocolate_covered_donut.png" alt="chocolate" class="top"></div>
+            <div id="sprinkles"><img src="sprinkles_donut.png" alt="sprinkles" class="top"></div>
+            </div>        
+        <div class="hide">
+            <div id="image_1"><img id="image1" src="plain_donut.png" alt="plain donut" class="bottom" onclick="changeImage()"></div>
+            <div id="image_1"><img src="plain_donut.png" alt="plain donut" class="bottom" onclick="changeImage()"></div>
+            <div id="image_2"><img src="plain_donut.png" alt="plain donut" class="bottom" onclick="changeImage()"></div>
+            <div id="image_2"><img src="plain_donut.png" alt="plain donut" class="bottom" onclick="changeImage()"></div>
+            <div id="image_3"><img src="plain_donut.png" alt="plain donut" class="bottom" onclick="changeImage()"></div>
+            <div id="image_3"><img src="plain_donut.png" alt="plain donut" class="bottom" onclick="changeImage()"></div>
+            <div id="image_4"><img src="plain_donut.png" alt="plain donut" class="bottom" onclick="changeImage()"></div>
+            <div id="image_4"><img src="plain_donut.png" alt="plain donut" class="bottom" onclick="changeImage()"></div>
+            <div id="image_5"><img src="plain_donut.png" alt="plain donut" class="bottom" onclick="changeImage()"></div>
+            <div id="image_5"><img src="plain_donut.png" alt="plain donut" class="bottom" onclick="changeImage()"></div>
+            <div id="image_6"><img src="plain_donut.png" alt="plain donut" class="bottom" onclick="changeImage()"></div>
+            <div id="image_6"><img src="plain_donut.png" alt="plain donut" class="bottom" onclick="changeImage()"></div>
+            <div id="image_7"><img src="plain_donut.png" alt="plain donut" class="bottom" onclick="changeImage()"></div>
+            <div id="image_7"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
+            <div id="image_8"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
+            <div id="image_8"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
+            <div id="image_9"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
+            <div id="image_9"><img src="plain_donut.png" alt="plain donut" class="bottom"></div>
             </div>
+
 </div>
 </body>
 </html>
