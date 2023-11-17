@@ -34,30 +34,30 @@ let revealCount = 0;
 let activeDonut = null;
 let awaitingEndOfMove = false;
 
+// Game Donut Creation
+ 
+function createDonut(donutTop) {
+    const element = document.createElement("div");
+
+    element.classList.add("donut-element");
+    element.setAttribute("data-donutTop", donutTop);
+
+    return element;
+}
+
+
 // Game Structure
 
 for (let i = 0; i < donutCount; i++) {
     const randomDonut = Math.floor(Math.random() * donutRevealChoices.length);
     const donutTop = donutRevealChoices[randomDonut];
-    console.log(donutTop)
+    const showDonut = createDonut(donutTop);
+   
+    // Removing Possibility of Choosing Same Donut Twice
+    
+    donutRevealChoices.splice(randomDonut, 1);
+    memoryGame.appendChild(showDonut);
+
+    console.log(donutTop);
+
 }
-
-// function buildDonut(color) {
-//     const element = document.createElement("div");
-
-//     element.classList.add("donut");
-//     element.setAttribute("data-color", color);
-//     element.setAttribute("data-revealed", "false");
-
-//     element.addEventListener(click", () => {
-//         const revealed = element.getAttribute("data-revealed");
-
-//         if (
-//             awaitingEndOfMove || revealed === "true" || element == activeDonut
-//         ) {
-//             return;
-//         }
-
-//         //Reveal Donut Top
-//         element.style.backgroundImage = "./plain_donut.png"
-//     }

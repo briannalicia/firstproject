@@ -11,9 +11,9 @@ body {
     grid-gap: 5px;
 }
 
-.donut {
+.donut-element {
     height: 200px;
-    background-image: url("plain_donut.png");
+    background-image: url("./plain_donut.png");
     cursor: pointer;
 }
 
