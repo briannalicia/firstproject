@@ -7,13 +7,16 @@ body {
     margin: 50px auto;
     width: max-content;
     display: grid;
-    grid-template-columns: repeat(5, 200px);
+    grid-template-columns: repeat(5, 100px);
     grid-gap: 5px;
 }
 
 .donut-element {
-    height: 200px;
-    background-image: url("./plain_donut.png");
+    height: 100px;
+    background-image: url("/plain_donut.png");
+    /* min-width: 100px;
+    min-height: 100px; */
+    /* background: black; */
     cursor: pointer;
 }
 

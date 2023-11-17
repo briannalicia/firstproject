@@ -15,16 +15,16 @@
 
 let arrayOfDonutTop = [];
 
-arrayOfDonutTop.push = ["./blue_donut.png", "./candies_donut.png", 
+arrayOfDonutTop.push("./blue_donut.png", "./candies_donut.png", 
 "./chocolate_covered_donut.png", "./chocolate_striped_donut.png", "./chocolate_with_nuts.png", 
 "./green.donut.png", "./pink_sprinkles_donut.png", 
 "./sprinkles_donut.png", "./strawberry_donut.png", 
-"./white_chocolate_striped_donut.png"]
+"./white_chocolate_striped_donut.png")
 
 const memoryGame = document.querySelector(".container");
 const donutReveal = ["arrayOfDonutTop[0]", "arrayOfDonutTop[1]", "arrayOfDonutTop[2]", 
 "arrayOfDonutTop[3]", "arrayOfDonutTop[4]", "arrayOfDonutTop[5]", "arrayOfDonutTop[6]", 
-"arrayOfDonutTop[7]", "arrayOfDonutTop[8]", "arrayOfDonutTop[9]"]
+"arrayOfDonutTop[7]", "arrayOfDonutTop[8]", "arrayOfDonutTop[9]"];
 const donutRevealChoices = [...donutReveal, ...donutReveal];
 const donutCount = donutRevealChoices.length;
 
@@ -41,6 +41,30 @@ function createDonut(donutTop) {
 
     element.classList.add("donut-element");
     element.setAttribute("data-donutTop", donutTop);
+
+    element.addEventListener("click", () => {
+        if (awaitingEndOfMove) {
+            return;
+        }
+
+        element.style.backgroundImage = donutTop;
+
+        if (!activeDonut) {
+            activeDonut = element;
+
+            return;
+        }
+
+        awaitingEndOfMove = true;
+
+        setTimeout(() => {
+            element.style.backgroundImage = null;
+            activeDonut.style.backgroundImage = null;
+
+            awaitingEndOfMove = false;
+            activeDonut = null;
+        }, 1000);
+    });
 
     return element;
 }
