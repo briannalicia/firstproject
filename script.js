@@ -72,7 +72,11 @@ function createDonut(donutTop) {
             activeDonut = null;
             revealedCount += 2;
 
-                if (revealedCount === )
+                if (revealedCount === donutCount) {
+                    alert("You've matched all the donuts, congrats! Refresh to play again!");
+                }
+
+                return;
         }
 
         awaitingEndOfMove = true;
