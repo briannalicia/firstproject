@@ -8,7 +8,7 @@
     justify-content: center;
     grid-template-columns: 200px 200px 200px 200px 200px 200px;
     grid-template-rows: 200px 200px 200px;
-    grid-gap: 20px;
+    grid-gap: 5px;
 }
 
 .hide {
@@ -22,7 +22,7 @@
     justify-content: center;
     grid-template-columns: 200px 200px 200px 200px 200px 200px;
     grid-template-rows: 200px 200px 200px;
-    grid-gap: 20px;
+    grid-gap: 5px;
 }
 
 .reveal {
