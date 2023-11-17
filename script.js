@@ -13,6 +13,10 @@
 //     changeImage(evt.target)
 // })
 
+// const image = document.createElement("img")
+// image.src = "./plain_donut.png"
+// document.querySelector(".container").appendChild(image)
+
 let arrayOfDonutTop = [];
 
 arrayOfDonutTop.push("./blue_donut.png", "./candies_donut.png", 
@@ -20,6 +24,8 @@ arrayOfDonutTop.push("./blue_donut.png", "./candies_donut.png",
 "./green.donut.png", "./pink_sprinkles_donut.png", 
 "./sprinkles_donut.png", "./strawberry_donut.png", 
 "./white_chocolate_striped_donut.png")
+
+console.log(arrayOfDonutTop)
 
 const memoryGame = document.querySelector(".container");
 const donutReveal = ["arrayOfDonutTop[0]", "arrayOfDonutTop[1]", "arrayOfDonutTop[2]", 
