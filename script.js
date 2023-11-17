@@ -41,9 +41,16 @@ function createDonut(donutTop) {
 
     element.classList.add("donut-element");
     element.setAttribute("data-donutTop", donutTop);
+    element.setAttribute("data-revealed", "false");
 
     element.addEventListener("click", () => {
-        if (awaitingEndOfMove) {
+        const revealed = element.getAttribute("data-revealed");
+        
+        if (
+            awaitingEndOfMove
+            || revealed === "true"
+            || element === activeDonut
+        ) {
             return;
         }
 
@@ -53,6 +60,19 @@ function createDonut(donutTop) {
             activeDonut = element;
 
             return;
+        }
+
+        const donutToMatch = activeDonut.getAttribute("data-donutTop");
+
+        if (donutToMatch === donutTop) {
+            activeDonut.setAttribute("data-revealed", "true");
+            element.setAttribute("data-revealed", "true");
+            
+            awaitingEndOfMove = false;
+            activeDonut = null;
+            revealedCount += 2;
+
+                if (revealedCount === )
         }
 
         awaitingEndOfMove = true;
