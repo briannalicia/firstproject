@@ -5,13 +5,13 @@ body {
 }
 
 
-.container {
+/* .container {
     margin: 50px auto;
     width: max-content;
     display: grid;
     grid-template-columns: repeat(5, 100px);
     grid-gap: 5px;
-}
+} */
 
 .donut-element {
     height: 100px;
@@ -22,14 +22,22 @@ body {
     cursor: pointer;
 }
 
-/* img {
+#image-container {
+    margin: 50px auto;
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-gap: 5px; 
+}
+
+img {
     width: 100px;
     height: 100px;
 }
 
 img:hover {
     cursor: pointer;
-} */
+}
 
 /* .hide {
     display: grid;

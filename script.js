@@ -32,28 +32,38 @@
 
 // console.log(arrayOfDonutTop)
 
-// Loop to actually src images?!
+// Loop to actually src images?! Please iterate!!
 
-const images = ["./blue_donut.png", "./candies_donut.png", 
+const arrayOfDonutTop = ["./blue_donut.png", "./candies_donut.png", 
 "./chocolate_covered_donut.png", "./chocolate_striped_donut.png", "./chocolate_with_nuts.png", 
-"./green.donut.png", "./pink_sprinkles_donut.png", 
+"./green_donut.png", "./pink_sprinkles_donut.png", 
 "./sprinkles_donut.png", "./strawberry_donut.png", 
 "./white_chocolate_striped_donut.png"];
 
 const imageContainer = document.getElementById("image-container");
 
-for (let i = 0; i < images.length; i++) {
+for (let i = 0; i < arrayOfDonutTop.length; i++) {
     const img = document.createElement("img");
-    img.src = images[i];
+    img.src = arrayOfDonutTop[i];
     imageContainer.appendChild(img);
 }
 
-const memoryGame = document.querySelector(".container");
-const donutReveal = ["arrayOfDonutTop[0]", "arrayOfDonutTop[1]", "arrayOfDonutTop[2]", 
-"arrayOfDonutTop[3]", "arrayOfDonutTop[4]", "arrayOfDonutTop[5]", "arrayOfDonutTop[6]", 
-"arrayOfDonutTop[7]", "arrayOfDonutTop[8]", "arrayOfDonutTop[9]"];
+const memoryGame = document.querySelector(".contain");
+const donutReveal = [arrayOfDonutTop[0], arrayOfDonutTop[1], arrayOfDonutTop[2], 
+arrayOfDonutTop[3], arrayOfDonutTop[4], arrayOfDonutTop[5], arrayOfDonutTop[6], 
+arrayOfDonutTop[7], arrayOfDonutTop[8], arrayOfDonutTop[9]];
 const donutRevealChoices = [...donutReveal, ...donutReveal];
 const donutCount = donutRevealChoices.length;
+
+console.log(arrayOfDonutTop)
+console.log(arrayOfDonutTop[2])
+
+// const memoryGame = document.querySelector(".container");
+// const donutReveal = ["arrayOfDonutTop[0]", "arrayOfDonutTop[1]", "arrayOfDonutTop[2]", 
+// "arrayOfDonutTop[3]", "arrayOfDonutTop[4]", "arrayOfDonutTop[5]", "arrayOfDonutTop[6]", 
+// "arrayOfDonutTop[7]", "arrayOfDonutTop[8]", "arrayOfDonutTop[9]"];
+// const donutRevealChoices = [...donutReveal, ...donutReveal];
+// const donutCount = donutRevealChoices.length;
 
 // Game Main Variables
 
