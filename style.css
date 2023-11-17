@@ -1,8 +1,23 @@
-.grid-container {
-    position: relative;
+body {
+    margin: 0;
 }
 
-.hide {
+
+.container {
+    margin: 50px auto;
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    grid-gap: 5px;
+}
+
+.donut {
+    height: 200px;
+    background-image: url("plain_donut.png");
+    cursor: pointer;
+}
+
+/* .hide {
     display: grid;
     align-items: center;
     justify-content: center;
@@ -28,9 +43,9 @@
 .reveal {
     position: absolute;
     top: 0;
-}
+} */
 
-.bottom, .reveal {
+/* .bottom, .reveal {
     grid-area: bottom, top; 
     animation-name: floating;
     animation-duration: 3s;
@@ -51,4 +66,4 @@ img {
 
 img:hover {
     cursor: pointer;
-}
+} */
