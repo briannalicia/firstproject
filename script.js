@@ -17,15 +17,36 @@
 // image.src = "./plain_donut.png"
 // document.querySelector(".container").appendChild(image)
 
-let arrayOfDonutTop = [];
 
-arrayOfDonutTop.push("./blue_donut.png", "./candies_donut.png", 
+// Game's Access to Donut Images via Array
+
+
+
+// let arrayOfDonutTop = [];
+
+// arrayOfDonutTop.push("./blue_donut.png", "./candies_donut.png", 
+// "./chocolate_covered_donut.png", "./chocolate_striped_donut.png", "./chocolate_with_nuts.png", 
+// "./green.donut.png", "./pink_sprinkles_donut.png", 
+// "./sprinkles_donut.png", "./strawberry_donut.png", 
+// "./white_chocolate_striped_donut.png")
+
+// console.log(arrayOfDonutTop)
+
+// Loop to actually src images?!
+
+const images = ["./blue_donut.png", "./candies_donut.png", 
 "./chocolate_covered_donut.png", "./chocolate_striped_donut.png", "./chocolate_with_nuts.png", 
 "./green.donut.png", "./pink_sprinkles_donut.png", 
 "./sprinkles_donut.png", "./strawberry_donut.png", 
-"./white_chocolate_striped_donut.png")
+"./white_chocolate_striped_donut.png"];
 
-console.log(arrayOfDonutTop)
+const imageContainer = document.getElementById("image-container");
+
+for (let i = 0; i < images.length; i++) {
+    const img = document.createElement("img");
+    img.src = images[i];
+    imageContainer.appendChild(img);
+}
 
 const memoryGame = document.querySelector(".container");
 const donutReveal = ["arrayOfDonutTop[0]", "arrayOfDonutTop[1]", "arrayOfDonutTop[2]", 
