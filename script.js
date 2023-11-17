@@ -34,13 +34,13 @@ const donutReveal = ["arrayOfDonutTop[0]", "arrayOfDonutTop[1]", "arrayOfDonutTo
 const donutRevealChoices = [...donutReveal, ...donutReveal];
 const donutCount = donutRevealChoices.length;
 
-// Game Function
+// Game Main Variables
 
 let revealCount = 0;
 let activeDonut = null;
 let awaitingEndOfMove = false;
 
-// Game Donut Creation
+// Donut Div Creation with Event Listener
  
 function createDonut(donutTop) {
     const element = document.createElement("div");
@@ -100,7 +100,7 @@ function createDonut(donutTop) {
 }
 
 
-// Game Structure
+// Game Structure or Loop
 
 for (let i = 0; i < donutCount; i++) {
     const randomDonut = Math.floor(Math.random() * donutRevealChoices.length);
