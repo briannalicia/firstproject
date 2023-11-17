@@ -24,4 +24,40 @@ arrayOfDonutTop.push = ["./blue_donut.png", "./candies_donut.png",
 const memoryGame = document.querySelector(".container");
 const donutReveal = ["arrayOfDonutTop[0]", "arrayOfDonutTop[1]", "arrayOfDonutTop[2]", 
 "arrayOfDonutTop[3]", "arrayOfDonutTop[4]", "arrayOfDonutTop[5]", "arrayOfDonutTop[6]", 
-"arrayOfDonutTop[7]", "arrayOfDonutTop[8]", "arrayOfDonutTop[9]"] 
+"arrayOfDonutTop[7]", "arrayOfDonutTop[8]", "arrayOfDonutTop[9]"]
+const donutRevealChoices = [...donutReveal, ...donutReveal];
+const donutCount = donutRevealChoices.length;
+
+// Game Function
+
+let revealCount = 0;
+let activeDonut = null;
+let awaitingEndOfMove = false;
+
+// Game Structure
+
+for (let i = 0; i < donutCount; i++) {
+    const randomDonut = Math.floor(Math.random() * donutRevealChoices.length);
+    const donutTop = donutRevealChoices[randomDonut];
+    console.log(donutTop)
+}
+
+// function buildDonut(color) {
+//     const element = document.createElement("div");
+
+//     element.classList.add("donut");
+//     element.setAttribute("data-color", color);
+//     element.setAttribute("data-revealed", "false");
+
+//     element.addEventListener(click", () => {
+//         const revealed = element.getAttribute("data-revealed");
+
+//         if (
+//             awaitingEndOfMove || revealed === "true" || element == activeDonut
+//         ) {
+//             return;
+//         }
+
+//         //Reveal Donut Top
+//         element.style.backgroundImage = "./plain_donut.png"
+//     }
